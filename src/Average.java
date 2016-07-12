@@ -5,19 +5,22 @@ import javax.swing.JOptionPane;
 import java.util.Scanner;
 public class Average {
     public static void main(String[]args){
-        // Step 1: Create a Scanner object to get user input
-        Scanner input = new Scanner(System.in);
-        // Step 2: Get user input
-        System.out.print("Enter number 1: ");
-        double number1 = input.nextDouble();
-        System.out.print("Enter number 2: ");
-        double number2 = input.nextDouble();
-        System.out.print("Enter number 3: ");
-        double number3 = input.nextDouble();
+        // Step 1: Get user input with JOptionPane
+        // Getting number 1
+        String input = JOptionPane.showInputDialog(null, "Enter number 1:", "Calculate Average",
+                       JOptionPane.INFORMATION_MESSAGE);
+        double number1 = Double.parseDouble(input);
+        // Getting number 2
+        input = JOptionPane.showInputDialog(null, "Enter number 2:", "Calculate Average",
+                JOptionPane.INFORMATION_MESSAGE);
+        double number2 = Double.parseDouble(input);
+        // Getting number 3
+        input = JOptionPane.showInputDialog(null, "Enter number 3:", "Calculate Average",
+                JOptionPane.INFORMATION_MESSAGE);
+        double number3 = Double.parseDouble(input);
         // Step 3: Calculate Average
         double average = (number1+number2+number3)/3;
         // Step 4: Display the result
-        System.out.println("The average is: " + average);
         JOptionPane.showMessageDialog(null, "The average is: " + average);
     }
 }
